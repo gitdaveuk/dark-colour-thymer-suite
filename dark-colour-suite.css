@@ -1,0 +1,1096 @@
+
+/* ============================================================
+2a. DARK: SAFELIGHT RED
+A photographic darkroom — everything sits under one
+deep-red safelight so the "film" isn't exposed.
+============================================================ */
+html[data-theme="basic-dark-safelight-red"] {
+  color-scheme: dark;
+
+  .heading-h1, .heading-h2, .heading-h3,
+  .heading-h4, .heading-h5, .heading-h6 {
+    color: #f0d9d2;
+    text-shadow: 0 1px 3px rgba(0,0,0,.4);
+  }
+
+  /* --- surfaces --- */
+  --color-bg-950: #120607;
+  --color-bg-900: #1a0a0b;
+  --color-bg-800: #230f10;
+  --color-bg-700: #2f1618;
+  --color-bg-600: #402024;
+  --color-bg-500: #4f2a2e;
+  --color-bg-400: #5f3438;
+  --color-bg-300: #7a4a4c;
+
+  /* --- primary / accent, full ramp so selection & focus stay red --- */
+  --color-primary-400: #d9502e;
+  --color-primary-500: #d9502e;
+  --color-primary-600: #b53a26;
+  --color-primary-700: #8f2e1f;
+  --color-primary-text-100: #120607;
+
+  /* --- text --- 
+  --color-text-50:  #f5e3df;
+  --color-text-100: #e0c4bd;
+  --color-text-400: #a98b83;
+  --color-text-700: #6e5650; */
+  --color-text-50: #cdcdcd;
+  --color-text-100: #cdcdcd;
+  --color-text-400: #cdcdcd;
+  --color-text-700: #cdcdcd;
+
+
+  --ed-caret-self-fg: var(--color-primary-500);
+--ed-caret-self-background: color-mix(in srgb, currentColor 25%, transparent);
+--ed-caret-self-border-width: 0px;
+--ed-caret-self-box-shadow: 0 0 2px currentColor;
+--ed-caret-self-radius: 2px;
+  
+
+  /* --- chrome --- */
+  --titlebar-bg-color: var(--color-bg-950);
+  --panel-bg-color: var(--color-bg-900);
+  --side-bg-color: var(--color-bg-800);
+  --status-bg-color: var(--color-bg-700);
+  --divider-color: rgba(240,217,210,.07);
+  --input-bg-color: var(--color-bg-950);
+  --input-border-focus: 1px solid var(--color-primary-500);
+  --input-border-shadow:
+    0 0 12px color-mix(in srgb, var(--color-primary-500) 35%, transparent);
+
+  --cmdpal-bg-color: var(--color-bg-800);
+  --cmdpal-selected-bg-color: #b53a26;
+  --cmdpal-selected-fg-color: #f7ece9;
+
+  --text-ok: #7fbf7a;
+  --text-warning: #d9a13f;
+  --text-error: #ef6f66;
+
+  /* --- checkboxes: full state coverage, not just "done" --- */
+  --ed-check-div-border: #d9502e;
+  --ed-check-div-hover-bg: #3a1c1e;
+  --ed-check-div-hover-border: #ef7050;
+  --ed-check-done-bg: #d9502e;
+  --ed-check-done-fg: #120607;
+  --ed-check-done-border: #b53a26;
+  --ed-check-started-fg: var(--ed-check-div-border);
+  --ed-check-blocked-fg: #e8836a;
+  --ed-check-blocked-border: #e8836a;
+
+  .listitem.listitem-task.state-done .lineitem-text {
+    color: #6b5450 !important;
+    text-decoration-color: #6b5450 !important;
+  }
+
+  /* --- inline references --- */
+  --ed-hashtag-bg: rgba(217,80,46,.12);
+  --ed-hashtag-color: #e8836a;
+  --ed-mention-bg: #3a1c1e;
+  --ed-mention-color: #ef9d85;
+  --ed-mention-hover-bg: #4a2224;
+  --ed-mention-hover-color: #f5c2ae;
+  --ed-datetime-bg: #3a1c1e;
+  --ed-datetime-color: #e8a06a;
+  --ed-inlineref-fg: #d9a06e;
+  --ed-inlineref-icon-fg: #d9a06e;
+  --ed-inlineref-underline: #d9a06e;
+  --ed-ref-fg: #d9a06e;
+  --ed-ref-icon-fg: #d9a06e;
+  --ed-ref-underline: #d9a06e;
+  --ed-link-color: #d9a13f;
+  --ed-link-hover-color: #f0c060;
+
+  /* --- logo glow --- */
+  --logo-color: #d9502e;
+  --logo-glow-shadow:
+    0 0 15px rgba(217,80,46,.6), 0 0 30px rgba(217,80,46,.4), 0 0 45px rgba(217,80,46,.2);
+  --shadow-primary-glow:
+    0 0 15px rgba(217,80,46,.6), 0 0 30px rgba(217,80,46,.4), 0 0 45px rgba(217,80,46,.2);
+
+  ::selection {
+    background: color-mix(in srgb, var(--color-primary-500) 30%, transparent);
+  }
+
+  .panel, .sidebar {
+    box-shadow: inset 0 0 0 1px rgba(217,80,46,.04);
+  }
+
+  button, .button, .listitem {
+    transition: background .15s ease, color .15s ease, box-shadow .15s ease;
+  }
+  button:hover, .button:hover {
+    filter: brightness(1.06);
+  }
+
+  a { color: #d9a13f; }
+  a:hover { color: #f0c060; }
+
+  code {
+    background: rgba(217,80,46,.09);
+    color: #e8836a;
+    border-radius: 4px;
+  }
+
+  blockquote {
+    border-left: 3px solid #d9502e;
+    color: #9c7d76;
+  }
+
+  hr {
+    border-color: rgba(240,217,210,.7);
+  }
+}
+
+
+/* ============================================================
+2b. DARK: DEEPWATER BLUE
+Submarine control-room blue — cool, low-glare, everything
+lit from one dim instrument panel.
+============================================================ */
+html[data-theme="basic-dark-deepwater-blue"] {
+  color-scheme: dark;
+
+  .heading-h1, .heading-h2, .heading-h3,
+  .heading-h4, .heading-h5, .heading-h6 {
+    color: #d2e2f0;
+    text-shadow: 0 1px 3px rgba(0,0,0,.4);
+  }
+
+  /* --- surfaces --- */
+  --color-bg-950: #06090f;
+  --color-bg-900: #0a0f1a;
+  --color-bg-800: #0f1623;
+  --color-bg-700: #16202f;
+  --color-bg-600: #202c40;
+  --color-bg-500: #2a3a51;
+  --color-bg-400: #34455f;
+  --color-bg-300: #4a5c78;
+
+  /* --- primary / accent --- */
+  --color-primary-400: #2e8fd9;
+  --color-primary-500: #2e8fd9;
+  --color-primary-600: #266fb5;
+  --color-primary-700: #1f568f;
+  --color-primary-text-100: #06090f;
+
+  /* --- text --- 
+  --color-text-50:  #dfecf5;
+  --color-text-100: #bdd3e0;
+  --color-text-400: #83a3b8;
+  --color-text-700: #506872;*/
+  --color-text-50: #cdcdcd;
+  --color-text-100: #cdcdcd;
+  --color-text-400: #cdcdcd;
+  --color-text-700: #cdcdcd;
+
+  --ed-caret-self-fg: var(--color-primary-500);
+--ed-caret-self-background: color-mix(in srgb, currentColor 25%, transparent);
+--ed-caret-self-border-width: 0px;
+--ed-caret-self-box-shadow: 0 0 2px currentColor;
+--ed-caret-self-radius: 2px;
+
+  /* --- chrome --- */
+  --titlebar-bg-color: var(--color-bg-950);
+  --panel-bg-color: var(--color-bg-900);
+  --side-bg-color: var(--color-bg-800);
+  --status-bg-color: var(--color-bg-700);
+  --divider-color: rgba(210,226,240,.07);
+  --input-bg-color: var(--color-bg-950);
+  --input-border-focus: 1px solid var(--color-primary-500);
+  --input-border-shadow:
+    0 0 12px color-mix(in srgb, var(--color-primary-500) 35%, transparent);
+
+  --cmdpal-bg-color: var(--color-bg-800);
+  --cmdpal-selected-bg-color: #266fb5;
+  --cmdpal-selected-fg-color: #e9f2f9;
+
+  --text-ok: #7fbf9a;
+  --text-warning: #d9b13f;
+  --text-error: #ef6f6f;
+
+  /* --- checkboxes --- */
+  --ed-check-div-border: #2e8fd9;
+  --ed-check-div-hover-bg: #1a2c3a;
+  --ed-check-div-hover-border: #50a8ef;
+  --ed-check-done-bg: #2e8fd9;
+  --ed-check-done-fg: #06090f;
+  --ed-check-done-border: #266fb5;
+  --ed-check-started-fg: var(--ed-check-div-border);
+  --ed-check-blocked-fg: #6ab8e8;
+  --ed-check-blocked-border: #6ab8e8;
+
+  .listitem.listitem-task.state-done .lineitem-text {
+    color: #506674 !important;
+    text-decoration-color: #506674 !important;
+  }
+
+  /* --- inline references --- */
+  --ed-hashtag-bg: rgba(46,143,217,.12);
+  --ed-hashtag-color: #6ab8e8;
+  --ed-mention-bg: #1a2c3a;
+  --ed-mention-color: #85c3ef;
+  --ed-mention-hover-bg: #223648;
+  --ed-mention-hover-color: #ade0f5;
+  --ed-datetime-bg: #1a2c3a;
+  --ed-datetime-color: #6ad0e8;
+  --ed-inlineref-fg: #6ac8c0;
+  --ed-inlineref-icon-fg: #6ac8c0;
+  --ed-inlineref-underline: #6ac8c0;
+  --ed-ref-fg: #6ac8c0;
+  --ed-ref-icon-fg: #6ac8c0;
+  --ed-ref-underline: #6ac8c0;
+  --ed-link-color: #3fc8d9;
+  --ed-link-hover-color: #78dee8;
+
+  /* --- logo glow --- */
+  --logo-color: #2e8fd9;
+  --logo-glow-shadow:
+    0 0 15px rgba(46,143,217,.6), 0 0 30px rgba(46,143,217,.4), 0 0 45px rgba(46,143,217,.2);
+  --shadow-primary-glow:
+    0 0 15px rgba(46,143,217,.6), 0 0 30px rgba(46,143,217,.4), 0 0 45px rgba(46,143,217,.2);
+
+  ::selection {
+    background: color-mix(in srgb, var(--color-primary-500) 30%, transparent);
+  }
+
+  .panel, .sidebar {
+    box-shadow: inset 0 0 0 1px rgba(46,143,217,.04);
+  }
+
+  button, .button, .listitem {
+    transition: background .15s ease, color .15s ease, box-shadow .15s ease;
+  }
+  button:hover, .button:hover {
+    filter: brightness(1.06);
+  }
+
+  a { color: #3fc8d9; }
+  a:hover { color: #78dee8; }
+
+  code {
+    background: rgba(46,143,217,.09);
+    color: #6ab8e8;
+    border-radius: 4px;
+  }
+
+  blockquote {
+    border-left: 3px solid #2e8fd9;
+    color: #7c96a6;
+  }
+
+  hr {
+    border-color: rgba(210,226,240,.7);
+  }
+}
+
+/* ============================================================
+2c. DARK: NIGHTGROVE GREEN
+A greenhouse after hours — deep phosphor green, the kind
+of glow that used to sit on old terminal screens.
+============================================================ */
+html[data-theme="basic-dark-nightgrove-green"] {
+  color-scheme: dark;
+
+  .heading-h1, .heading-h2, .heading-h3,
+  .heading-h4, .heading-h5, .heading-h6 {
+    color: #d5f0d9;
+    text-shadow: 0 1px 3px rgba(0,0,0,.4);
+  }
+
+  /* --- surfaces --- */
+  --color-bg-950: #060f08;
+  --color-bg-900: #0a1a0e;
+  --color-bg-800: #0f2314;
+  --color-bg-700: #162f1c;
+  --color-bg-600: #204026;
+  --color-bg-500: #2a512f;
+  --color-bg-400: #34613a;
+  --color-bg-300: #4a7a4e;
+
+  /* --- primary / accent --- */
+  --color-primary-400: #3fae4f;
+  --color-primary-500: #3fae4f;
+  --color-primary-600: #328c40;
+  --color-primary-700: #276e32;
+  --color-primary-text-100: #060f08;
+
+  /* --- text --- 
+  --color-text-50:  #e0f5e2;
+  --color-text-100: #c0e0c3;
+  --color-text-400: #8bb88f;
+  --color-text-700: #567256;*/
+  --color-text-50: #cdcdcd;
+  --color-text-100: #cdcdcd;
+  --color-text-400: #cdcdcd;
+  --color-text-700: #cdcdcd;
+
+--ed-caret-self-fg: var(--color-primary-500);
+--ed-caret-self-background: color-mix(in srgb, currentColor 25%, transparent);
+--ed-caret-self-border-width: 0px;
+--ed-caret-self-box-shadow: 0 0 2px currentColor;
+--ed-caret-self-radius: 2px;
+
+  
+  /* --- chrome --- */
+  --titlebar-bg-color: var(--color-bg-950);
+  --panel-bg-color: var(--color-bg-900);
+  --side-bg-color: var(--color-bg-800);
+  --status-bg-color: var(--color-bg-700);
+  --divider-color: rgba(213,240,217,.07);
+  --input-bg-color: var(--color-bg-950);
+  --input-border-focus: 1px solid var(--color-primary-500);
+  --input-border-shadow:
+    0 0 12px color-mix(in srgb, var(--color-primary-500) 35%, transparent);
+
+  --cmdpal-bg-color: var(--color-bg-800);
+  --cmdpal-selected-bg-color: #328c40;
+  --cmdpal-selected-fg-color: #ecf9ed;
+
+  --text-ok: #7fbf7a;
+  --text-warning: #d9a13f;
+  --text-error: #ef6f66;
+
+  /* --- checkboxes --- */
+  --ed-check-div-border: #3fae4f;
+  --ed-check-div-hover-bg: #1c331f;
+  --ed-check-div-hover-border: #58c968;
+  --ed-check-done-bg: #3fae4f;
+  --ed-check-done-fg: #060f08;
+  --ed-check-done-border: #328c40;
+  --ed-check-started-fg: var(--ed-check-div-border);
+  --ed-check-blocked-fg: #7bd88a;
+  --ed-check-blocked-border: #7bd88a;
+
+  .listitem.listitem-task.state-done .lineitem-text {
+    color: #4f6752 !important;
+    text-decoration-color: #4f6752 !important;
+  }
+
+  /* --- inline references --- */
+  --ed-hashtag-bg: rgba(63,174,79,.12);
+  --ed-hashtag-color: #7bd88a;
+  --ed-mention-bg: #1c331f;
+  --ed-mention-color: #8fdc9c;
+  --ed-mention-hover-bg: #244027;
+  --ed-mention-hover-color: #b5edbe;
+  --ed-datetime-bg: #1c331f;
+  --ed-datetime-color: #a0e070;
+  --ed-inlineref-fg: #8ab86a;
+  --ed-inlineref-icon-fg: #8ab86a;
+  --ed-inlineref-underline: #8ab86a;
+  --ed-ref-fg: #8ab86a;
+  --ed-ref-icon-fg: #8ab86a;
+  --ed-ref-underline: #8ab86a;
+  --ed-link-color: #a8d93f;
+  --ed-link-hover-color: #c8ec78;
+
+  /* --- logo glow --- */
+  --logo-color: #3fae4f;
+  --logo-glow-shadow:
+    0 0 15px rgba(63,174,79,.6), 0 0 30px rgba(63,174,79,.4), 0 0 45px rgba(63,174,79,.2);
+  --shadow-primary-glow:
+    0 0 15px rgba(63,174,79,.6), 0 0 30px rgba(63,174,79,.4), 0 0 45px rgba(63,174,79,.2);
+
+  ::selection {
+    background: color-mix(in srgb, var(--color-primary-500) 30%, transparent);
+  }
+
+  .panel, .sidebar {
+    box-shadow: inset 0 0 0 1px rgba(63,174,79,.04);
+  }
+
+  button, .button, .listitem {
+    transition: background .15s ease, color .15s ease, box-shadow .15s ease;
+  }
+  button:hover, .button:hover {
+    filter: brightness(1.06);
+  }
+
+  a { color: #a8d93f; }
+  a:hover { color: #c8ec78; }
+
+  code {
+    background: rgba(63,174,79,.09);
+    color: #7bd88a;
+    border-radius: 4px;
+  }
+
+  blockquote {
+    border-left: 3px solid #3fae4f;
+    color: #7e967f;
+  }
+
+  hr {
+    border-color: rgba(213,240,217,.7);
+  }
+}
+
+
+/* ============================================================
+2d. DARK: AFTERHOURS VIOLET
+Late-night lounge violet — moody, a little neon, low
+enough contrast to sit with for hours.
+============================================================ */
+html[data-theme="basic-dark-afterhours-violet"] {
+  color-scheme: dark;
+
+  .heading-h1, .heading-h2, .heading-h3,
+  .heading-h4, .heading-h5, .heading-h6 {
+    color: #e6d9f0;
+    text-shadow: 0 1px 3px rgba(0,0,0,.4);
+  }
+
+  /* --- surfaces --- */
+  --color-bg-950: #0d0611;
+  --color-bg-900: #150a1a;
+  --color-bg-800: #1d0f23;
+  --color-bg-700: #29172f;
+  --color-bg-600: #382040;
+  --color-bg-500: #472a51;
+  --color-bg-400: #56345f;
+  --color-bg-300: #714a7a;
+
+  /* --- primary / accent --- */
+  --color-primary-400: #9d4fd9;
+  --color-primary-500: #9d4fd9;
+  --color-primary-600: #813eb5;
+  --color-primary-700: #66318f;
+  --color-primary-text-100: #0d0611;
+
+  /* --- text --- 
+  --color-text-50:  #f0e3f5;
+  --color-text-100: #d9c0e0;
+  --color-text-400: #ab8bb8;
+  --color-text-700: #6b5672;*/
+  --color-text-50: #cdcdcd;
+  --color-text-100: #cdcdcd;
+  --color-text-400: #cdcdcd;
+  --color-text-700: #cdcdcd;
+
+--ed-caret-self-fg: var(--color-primary-500);
+--ed-caret-self-background: color-mix(in srgb, currentColor 25%, transparent);
+--ed-caret-self-border-width: 0px;
+--ed-caret-self-box-shadow: 0 0 2px currentColor;
+--ed-caret-self-radius: 2px;
+  
+  /* --- chrome --- */
+  --titlebar-bg-color: var(--color-bg-950);
+  --panel-bg-color: var(--color-bg-900);
+  --side-bg-color: var(--color-bg-800);
+  --status-bg-color: var(--color-bg-700);
+  --divider-color: rgba(230,217,240,.07);
+  --input-bg-color: var(--color-bg-950);
+  --input-border-focus: 1px solid var(--color-primary-500);
+  --input-border-shadow:
+    0 0 12px color-mix(in srgb, var(--color-primary-500) 35%, transparent);
+
+  --cmdpal-bg-color: var(--color-bg-800);
+  --cmdpal-selected-bg-color: #813eb5;
+  --cmdpal-selected-fg-color: #f5ecf9;
+
+  --text-ok: #7fbf9a;
+  --text-warning: #d9a13f;
+  --text-error: #ef6fa8;
+
+  /* --- checkboxes --- */
+  --ed-check-div-border: #9d4fd9;
+  --ed-check-div-hover-bg: #2e1c3a;
+  --ed-check-div-hover-border: #b968ef;
+  --ed-check-done-bg: #9d4fd9;
+  --ed-check-done-fg: #0d0611;
+  --ed-check-done-border: #813eb5;
+  --ed-check-started-fg: var(--ed-check-div-border);
+  --ed-check-blocked-fg: #c88ae8;
+  --ed-check-blocked-border: #c88ae8;
+
+  .listitem.listitem-task.state-done .lineitem-text {
+    color: #62506b !important;
+    text-decoration-color: #62506b !important;
+  }
+
+  /* --- inline references --- */
+  --ed-hashtag-bg: rgba(157,79,217,.12);
+  --ed-hashtag-color: #c88ae8;
+  --ed-mention-bg: #2e1c3a;
+  --ed-mention-color: #d09cef;
+  --ed-mention-hover-bg: #3a2448;
+  --ed-mention-hover-color: #e8bef5;
+  --ed-datetime-bg: #2e1c3a;
+  --ed-datetime-color: #e070c0;
+  --ed-inlineref-fg: #b88ae0;
+  --ed-inlineref-icon-fg: #b88ae0;
+  --ed-inlineref-underline: #b88ae0;
+  --ed-ref-fg: #b88ae0;
+  --ed-ref-icon-fg: #b88ae0;
+  --ed-ref-underline: #b88ae0;
+  --ed-link-color: #e04fa0;
+  --ed-link-hover-color: #f088c0;
+
+  /* --- logo glow --- */
+  --logo-color: #9d4fd9;
+  --logo-glow-shadow:
+    0 0 15px rgba(157,79,217,.6), 0 0 30px rgba(157,79,217,.4), 0 0 45px rgba(157,79,217,.2);
+  --shadow-primary-glow:
+    0 0 15px rgba(157,79,217,.6), 0 0 30px rgba(157,79,217,.4), 0 0 45px rgba(157,79,217,.2);
+
+  ::selection {
+    background: color-mix(in srgb, var(--color-primary-500) 30%, transparent);
+  }
+
+  .panel, .sidebar {
+    box-shadow: inset 0 0 0 1px rgba(157,79,217,.04);
+  }
+
+  button, .button, .listitem {
+    transition: background .15s ease, color .15s ease, box-shadow .15s ease;
+  }
+  button:hover, .button:hover {
+    filter: brightness(1.06);
+  }
+
+  a { color: #e04fa0; }
+  a:hover { color: #f088c0; }
+
+  code {
+    background: rgba(157,79,217,.09);
+    color: #c88ae8;
+    border-radius: 4px;
+  }
+
+  blockquote {
+    border-left: 3px solid #9d4fd9;
+    color: #967e9c;
+  }
+
+  hr {
+    border-color: rgba(230,217,240,.7);
+  }
+}
+
+/* ============================================================
+1a. LIGHT: SAFELIGHT RED
+Warm paper-white darkroom proof sheet — same red identity,
+lifted into daylight.
+============================================================ */
+html[data-theme="basic-light-safelight-red"] {
+  color-scheme: light;
+
+  .heading-h1, .heading-h2, .heading-h3,
+  .heading-h4, .heading-h5, .heading-h6 {
+    color: #4a1410;
+    text-shadow: none;
+  }
+
+  /* --- surfaces --- */
+  --color-bg-950: #fdf6f4;
+  --color-bg-900: #faeae6;
+  --color-bg-800: #f5ddd7;
+  --color-bg-700: #edc9c1;
+  --color-bg-600: #e0b0a5;
+  --color-bg-500: #cf9284;
+  --color-bg-400: #b87565;
+  --color-bg-300: #9c5a4a;
+
+  /* --- primary / accent --- */
+  --color-primary-400: #d9502e;
+  --color-primary-500: #c94526;
+  --color-primary-600: #a8371e;
+  --color-primary-700: #862c18;
+  --color-primary-text-100: #fdf6f4;
+
+  /* --- text --- */
+  --color-text-50:  #2e0e0b;
+  --color-text-100: #4a1a14;
+  --color-text-400: #7a4238;
+  --color-text-700: #a97a6d;
+
+  --ed-caret-self-fg: var(--color-primary-500);
+
+  /* --- chrome --- */
+  --titlebar-bg-color: var(--color-bg-950);
+  --panel-bg-color: #ffffff;
+  --side-bg-color: var(--color-bg-900);
+  --status-bg-color: var(--color-bg-800);
+  --divider-color: rgba(74,20,16,.09);
+  --input-bg-color: #ffffff;
+  --input-border-focus: 1px solid var(--color-primary-500);
+  --input-border-shadow:
+    0 0 8px color-mix(in srgb, var(--color-primary-500) 25%, transparent);
+
+  --cmdpal-bg-color: #ffffff;
+  --cmdpal-selected-bg-color: #f0c9be;
+  --cmdpal-selected-fg-color: #4a1410;
+
+  --text-ok: #3f8a3a;
+  --text-warning: #a8760f;
+  --text-error: #c93a2e;
+
+  /* --- checkboxes --- */
+  --ed-check-div-border: #c94526;
+  --ed-check-div-hover-bg: #f5ddd7;
+  --ed-check-div-hover-border: #a8371e;
+  --ed-check-done-bg: #c94526;
+  --ed-check-done-fg: #fdf6f4;
+  --ed-check-done-border: #a8371e;
+  --ed-check-started-fg: var(--ed-check-div-border);
+  --ed-check-blocked-fg: #b8503c;
+  --ed-check-blocked-border: #b8503c;
+
+  .listitem.listitem-task.state-done .lineitem-text {
+    color: #b39089 !important;
+    text-decoration-color: #b39089 !important;
+  }
+
+  /* --- inline references --- */
+  --ed-hashtag-bg: rgba(201,69,38,.10);
+  --ed-hashtag-color: #a8371e;
+  --ed-mention-bg: #f5ddd7;
+  --ed-mention-color: #a8371e;
+  --ed-mention-hover-bg: #edc9c1;
+  --ed-mention-hover-color: #862c18;
+  --ed-datetime-bg: #f5ddd7;
+  --ed-datetime-color: #a8611e;
+  --ed-inlineref-fg: #a86a3a;
+  --ed-inlineref-icon-fg: #a86a3a;
+  --ed-inlineref-underline: #a86a3a;
+  --ed-ref-fg: #a86a3a;
+  --ed-ref-icon-fg: #a86a3a;
+  --ed-ref-underline: #a86a3a;
+  --ed-link-color: #a8760f;
+  --ed-link-hover-color: #86600c;
+
+  /* --- logo glow --- */
+  --logo-color: #c94526;
+  --logo-glow-shadow: none;
+  --shadow-primary-glow: none;
+
+  ::selection {
+    background: color-mix(in srgb, var(--color-primary-500) 20%, transparent);
+  }
+
+  .panel, .sidebar {
+    box-shadow: inset 0 0 0 1px rgba(201,69,38,.06);
+  }
+
+  button, .button, .listitem {
+    transition: background .15s ease, color .15s ease, box-shadow .15s ease;
+  }
+  button:hover, .button:hover {
+    filter: brightness(0.97);
+  }
+
+  a { color: #a8760f; }
+  a:hover { color: #86600c; }
+
+  code {
+    background: rgba(201,69,38,.08);
+    color: #a8371e;
+    border-radius: 4px;
+  }
+
+  blockquote {
+    border-left: 3px solid #c94526;
+    color: #8a5a4e;
+  }
+
+  hr {
+    border-color: rgba(74,20,16,.15);
+  }
+}
+
+
+/* ============================================================
+1b. LIGHT: DEEPWATER BLUE
+Bright control-room daytime shift — same cool blue identity,
+crisp on white.
+============================================================ */
+html[data-theme="basic-light-deepwater-blue"] {
+  color-scheme: light;
+
+  .heading-h1, .heading-h2, .heading-h3,
+  .heading-h4, .heading-h5, .heading-h6 {
+    color: #0f2438;
+    text-shadow: none;
+  }
+
+  /* --- surfaces --- */
+  --color-bg-950: #f5f9fd;
+  --color-bg-900: #e8f1fa;
+  --color-bg-800: #d7e6f2;
+  --color-bg-700: #c0d6e8;
+  --color-bg-600: #a3c1da;
+  --color-bg-500: #82a6c4;
+  --color-bg-400: #648baa;
+  --color-bg-300: #4b708c;
+
+  /* --- primary / accent --- */
+  --color-primary-400: #2e8fd9;
+  --color-primary-500: #2277bf;
+  --color-primary-600: #1c609e;
+  --color-primary-700: #164c7d;
+  --color-primary-text-100: #f5f9fd;
+
+  /* --- text --- */
+  --color-text-50:  #0a1826;
+  --color-text-100: #14283c;
+  --color-text-400: #3d5a72;
+  --color-text-700: #7392a8;
+
+  --ed-caret-self-fg: var(--color-primary-500);
+
+  /* --- chrome --- */
+  --titlebar-bg-color: var(--color-bg-950);
+  --panel-bg-color: #ffffff;
+  --side-bg-color: var(--color-bg-900);
+  --status-bg-color: var(--color-bg-800);
+  --divider-color: rgba(15,36,56,.09);
+  --input-bg-color: #ffffff;
+  --input-border-focus: 1px solid var(--color-primary-500);
+  --input-border-shadow:
+    0 0 8px color-mix(in srgb, var(--color-primary-500) 25%, transparent);
+
+  --cmdpal-bg-color: #ffffff;
+  --cmdpal-selected-bg-color: #c0dcf0;
+  --cmdpal-selected-fg-color: #0f2438;
+
+  --text-ok: #3f8a5a;
+  --text-warning: #a8830f;
+  --text-error: #c9403f;
+
+  /* --- checkboxes --- */
+  --ed-check-div-border: #2277bf;
+  --ed-check-div-hover-bg: #d7e6f2;
+  --ed-check-div-hover-border: #1c609e;
+  --ed-check-done-bg: #2277bf;
+  --ed-check-done-fg: #f5f9fd;
+  --ed-check-done-border: #1c609e;
+  --ed-check-started-fg: var(--ed-check-div-border);
+  --ed-check-blocked-fg: #3d7cae;
+  --ed-check-blocked-border: #3d7cae;
+
+  .listitem.listitem-task.state-done .lineitem-text {
+    color: #8fa8ba !important;
+    text-decoration-color: #8fa8ba !important;
+  }
+
+  /* --- inline references --- */
+  --ed-hashtag-bg: rgba(34,119,191,.10);
+  --ed-hashtag-color: #1c609e;
+  --ed-mention-bg: #d7e6f2;
+  --ed-mention-color: #1c609e;
+  --ed-mention-hover-bg: #c0d6e8;
+  --ed-mention-hover-color: #164c7d;
+  --ed-datetime-bg: #d7e6f2;
+  --ed-datetime-color: #1e7a8c;
+  --ed-inlineref-fg: #2e8478;
+  --ed-inlineref-icon-fg: #2e8478;
+  --ed-inlineref-underline: #2e8478;
+  --ed-ref-fg: #2e8478;
+  --ed-ref-icon-fg: #2e8478;
+  --ed-ref-underline: #2e8478;
+  --ed-link-color: #1a8c9c;
+  --ed-link-hover-color: #14707d;
+
+  /* --- logo glow --- */
+  --logo-color: #2277bf;
+  --logo-glow-shadow: none;
+  --shadow-primary-glow: none;
+
+  ::selection {
+    background: color-mix(in srgb, var(--color-primary-500) 20%, transparent);
+  }
+
+  .panel, .sidebar {
+    box-shadow: inset 0 0 0 1px rgba(34,119,191,.06);
+  }
+
+  button, .button, .listitem {
+    transition: background .15s ease, color .15s ease, box-shadow .15s ease;
+  }
+  button:hover, .button:hover {
+    filter: brightness(0.97);
+  }
+
+  a { color: #1a8c9c; }
+  a:hover { color: #14707d; }
+
+  code {
+    background: rgba(34,119,191,.08);
+    color: #1c609e;
+    border-radius: 4px;
+  }
+
+  blockquote {
+    border-left: 3px solid #2277bf;
+    color: #4e7488;
+  }
+
+  hr {
+    border-color: rgba(15,36,56,.15);
+  }
+}
+
+
+/* ============================================================
+1c. LIGHT: NIGHTGROVE GREEN
+Greenhouse at midday — same phosphor-green identity,
+fresh and leafy in daylight.
+============================================================ */
+html[data-theme="basic-light-nightgrove-green"] {
+  color-scheme: light;
+
+  .heading-h1, .heading-h2, .heading-h3,
+  .heading-h4, .heading-h5, .heading-h6 {
+    color: #11321a;
+    text-shadow: none;
+  }
+
+  /* --- surfaces --- */
+  --color-bg-950: #f5fbf6;
+  --color-bg-900: #e6f4e8;
+  --color-bg-800: #d2ead6;
+  --color-bg-700: #b7dcbd;
+  --color-bg-600: #96c99e;
+  --color-bg-500: #74b17e;
+  --color-bg-400: #549760;
+  --color-bg-300: #3d7c48;
+
+  /* --- primary / accent --- */
+  --color-primary-400: #3fae4f;
+  --color-primary-500: #339943;
+  --color-primary-600: #297d37;
+  --color-primary-700: #20632b;
+  --color-primary-text-100: #f5fbf6;
+
+  /* --- text --- */
+  --color-text-50:  #0c2010;
+  --color-text-100: #163a1e;
+  --color-text-400: #3f6448;
+  --color-text-700: #7a9c81;
+
+  --ed-caret-self-fg: var(--color-primary-500);
+
+  /* --- chrome --- */
+  --titlebar-bg-color: var(--color-bg-950);
+  --panel-bg-color: #ffffff;
+  --side-bg-color: var(--color-bg-900);
+  --status-bg-color: var(--color-bg-800);
+  --divider-color: rgba(17,50,26,.09);
+  --input-bg-color: #ffffff;
+  --input-border-focus: 1px solid var(--color-primary-500);
+  --input-border-shadow:
+    0 0 8px color-mix(in srgb, var(--color-primary-500) 25%, transparent);
+
+  --cmdpal-bg-color: #ffffff;
+  --cmdpal-selected-bg-color: #c5e8ca;
+  --cmdpal-selected-fg-color: #11321a;
+
+  --text-ok: #297d37;
+  --text-warning: #a8830f;
+  --text-error: #c9403f;
+
+  /* --- checkboxes --- */
+  --ed-check-div-border: #339943;
+  --ed-check-div-hover-bg: #d2ead6;
+  --ed-check-div-hover-border: #297d37;
+  --ed-check-done-bg: #339943;
+  --ed-check-done-fg: #f5fbf6;
+  --ed-check-done-border: #297d37;
+  --ed-check-started-fg: var(--ed-check-div-border);
+  --ed-check-blocked-fg: #4a9c58;
+  --ed-check-blocked-border: #4a9c58;
+
+  .listitem.listitem-task.state-done .lineitem-text {
+    color: #91b596 !important;
+    text-decoration-color: #91b596 !important;
+  }
+
+  /* --- inline references --- */
+  --ed-hashtag-bg: rgba(51,153,67,.10);
+  --ed-hashtag-color: #297d37;
+  --ed-mention-bg: #d2ead6;
+  --ed-mention-color: #297d37;
+  --ed-mention-hover-bg: #b7dcbd;
+  --ed-mention-hover-color: #20632b;
+  --ed-datetime-bg: #d2ead6;
+  --ed-datetime-color: #5a8c1e;
+  --ed-inlineref-fg: #5c8c3a;
+  --ed-inlineref-icon-fg: #5c8c3a;
+  --ed-inlineref-underline: #5c8c3a;
+  --ed-ref-fg: #5c8c3a;
+  --ed-ref-icon-fg: #5c8c3a;
+  --ed-ref-underline: #5c8c3a;
+  --ed-link-color: #6e8c1a;
+  --ed-link-hover-color: #56700f;
+
+  /* --- logo glow --- */
+  --logo-color: #339943;
+  --logo-glow-shadow: none;
+  --shadow-primary-glow: none;
+
+  ::selection {
+    background: color-mix(in srgb, var(--color-primary-500) 20%, transparent);
+  }
+
+  .panel, .sidebar {
+    box-shadow: inset 0 0 0 1px rgba(51,153,67,.06);
+  }
+
+  button, .button, .listitem {
+    transition: background .15s ease, color .15s ease, box-shadow .15s ease;
+  }
+  button:hover, .button:hover {
+    filter: brightness(0.97);
+  }
+
+  a { color: #6e8c1a; }
+  a:hover { color: #56700f; }
+
+  code {
+    background: rgba(51,153,67,.08);
+    color: #297d37;
+    border-radius: 4px;
+  }
+
+  blockquote {
+    border-left: 3px solid #339943;
+    color: #4e7256;
+  }
+
+  hr {
+    border-color: rgba(17,50,26,.15);
+  }
+}
+
+
+/* ============================================================
+1d. LIGHT: AFTERHOURS VIOLET
+Sunlit lounge violet — same moody-neon identity, softened
+and legible on a pale lavender-white.
+============================================================ */
+html[data-theme="basic-light-afterhours-violet"] {
+  color-scheme: light;
+
+  .heading-h1, .heading-h2, .heading-h3,
+  .heading-h4, .heading-h5, .heading-h6 {
+    color: #2f1338;
+    text-shadow: none;
+  }
+
+  /* --- surfaces --- */
+  --color-bg-950: #faf6fc;
+  --color-bg-900: #f1e6f5;
+  --color-bg-800: #e5d2ec;
+  --color-bg-700: #d5b7e0;
+  --color-bg-600: #c096d0;
+  --color-bg-500: #a674b8;
+  --color-bg-400: #8c559e;
+  --color-bg-300: #713e82;
+
+  /* --- primary / accent --- */
+  --color-primary-400: #9d4fd9;
+  --color-primary-500: #8a3ec2;
+  --color-primary-600: #7130a3;
+  --color-primary-700: #582583;
+  --color-primary-text-100: #faf6fc;
+
+  /* --- text --- */
+  --color-text-50:  #220c2a;
+  --color-text-100: #3a1846;
+  --color-text-400: #664076;
+  --color-text-700: #9c7aac;
+
+  --ed-caret-self-fg: var(--color-primary-500);
+
+  /* --- chrome --- */
+  --titlebar-bg-color: var(--color-bg-950);
+  --panel-bg-color: #ffffff;
+  --side-bg-color: var(--color-bg-900);
+  --status-bg-color: var(--color-bg-800);
+  --divider-color: rgba(47,19,56,.09);
+  --input-bg-color: #ffffff;
+  --input-border-focus: 1px solid var(--color-primary-500);
+  --input-border-shadow:
+    0 0 8px color-mix(in srgb, var(--color-primary-500) 25%, transparent);
+
+  --cmdpal-bg-color: #ffffff;
+  --cmdpal-selected-bg-color: #e0c5ec;
+  --cmdpal-selected-fg-color: #2f1338;
+
+  --text-ok: #3f8a5a;
+  --text-warning: #a8760f;
+  --text-error: #c9407e;
+
+  /* --- checkboxes --- */
+  --ed-check-div-border: #8a3ec2;
+  --ed-check-div-hover-bg: #e5d2ec;
+  --ed-check-div-hover-border: #7130a3;
+  --ed-check-done-bg: #8a3ec2;
+  --ed-check-done-fg: #faf6fc;
+  --ed-check-done-border: #7130a3;
+  --ed-check-started-fg: var(--ed-check-div-border);
+  --ed-check-blocked-fg: #9c4fb8;
+  --ed-check-blocked-border: #9c4fb8;
+
+  .listitem.listitem-task.state-done .lineitem-text {
+    color: #ab8fb5 !important;
+    text-decoration-color: #ab8fb5 !important;
+  }
+
+  /* --- inline references --- */
+  --ed-hashtag-bg: rgba(138,62,194,.10);
+  --ed-hashtag-color: #7130a3;
+  --ed-mention-bg: #e5d2ec;
+  --ed-mention-color: #7130a3;
+  --ed-mention-hover-bg: #d5b7e0;
+  --ed-mention-hover-color: #582583;
+  --ed-datetime-bg: #e5d2ec;
+  --ed-datetime-color: #a01e7a;
+  --ed-inlineref-fg: #3e6ea0;
+  --ed-inlineref-icon-fg: #3e6ea0;
+  --ed-inlineref-underline: #3e6ea0;
+  --ed-ref-fg: #3e6ea0;
+  --ed-ref-icon-fg: #3e6ea0;
+  --ed-ref-underline: #3e6ea0;
+  --ed-link-color: #a01e6a;
+  --ed-link-hover-color: #80165a;
+
+  /* --- logo glow --- */
+  --logo-color: #8a3ec2;
+  --logo-glow-shadow: none;
+  --shadow-primary-glow: none;
+
+  ::selection {
+    background: color-mix(in srgb, var(--color-primary-500) 20%, transparent);
+  }
+
+  .panel, .sidebar {
+    box-shadow: inset 0 0 0 1px rgba(138,62,194,.06);
+  }
+
+  button, .button, .listitem {
+    transition: background .15s ease, color .15s ease, box-shadow .15s ease;
+  }
+  button:hover, .button:hover {
+    filter: brightness(0.97);
+  }
+
+  a { color: #a01e6a; }
+  a:hover { color: #80165a; }
+
+  code {
+    background: rgba(138,62,194,.08);
+    color: #7130a3;
+    border-radius: 4px;
+  }
+
+  blockquote {
+    border-left: 3px solid #8a3ec2;
+    color: #7a5c86;
+  }
+
+  hr {
+    border-color: rgba(47,19,56,.15);
+  }
+}
